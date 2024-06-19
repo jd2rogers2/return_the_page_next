@@ -1,0 +1,22 @@
+version: '3.1'
+
+volumes:
+  pgdata:
+
+services:
+  next:
+    build:
+      context: ./next_app
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - ./next_app:/app
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: example
+      POSTGRES_USER: example
+      POSTGRES_PASSWORD: example
+    volumes:
+      - pgdata:/var/lib/postgresql/data
