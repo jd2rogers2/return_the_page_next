@@ -1,7 +1,7 @@
 - prior misunderstandings
   - there would be a server and routes i could write
     - instead we can access DBs directly in SSR components because, yep, they're on the server side
-
+    - update: actually you can use /app/api/resource/route.ts
 
 - `npx create-next-app@latest app_name`
 - next has its own routing lib so no react router
